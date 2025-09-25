@@ -22,7 +22,7 @@ local function copen(self, height)
     return false
   end
   local cur_qf = vim.fn.getqflist({ winid = 0, id = self.qf_id })
-  local open_cmd = "botright copen"
+  local open_cmd = "vert copen | wincmd ="
   if height then
     open_cmd = string.format("%s %d", open_cmd, height)
   end
